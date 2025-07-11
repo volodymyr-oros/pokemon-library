@@ -1,0 +1,21 @@
+.template {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 15px 1fr 15px;
+  grid-template-areas:
+    ". header ."
+    ". content ."
+    ". footer .";
+
+  &__header {
+    grid-area: header;
+  }
+
+  &__page {
+    grid-area: content;
+  }
+
+  &__footer {
+    grid-area: footer;
+  }
+}
