@@ -1,0 +1,50 @@
+@use "../../styles/mixins/media" as *;
+@use "../../styles/variables/color-scheme" as *;
+
+$viewport-margin: calc((100vw - 100%) / 2);
+$edge-position: calc($viewport-margin * -1);
+
+.header {
+  position: relative;
+  padding-block: 1em;
+  background-color: $color-primary;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset-block-start: 0;
+    height: 100%;
+    width: $viewport-margin;
+    background-color: $color-primary;
+  }
+
+  &::before {
+    inset-inline-start: $edge-position;
+  }
+
+  &::after {
+    inset-inline-end: $edge-position;
+  }
+}
+
+.logo {
+  width: fit-content;
+  margin: 0 auto;
+
+  &__link {
+    img {
+      aspect-ratio: 1 / 1;
+      width: 3em;
+
+      @include respond(md) {
+        width: 5em;
+      }
+      
+      @include respond(xl) {
+        width: 7em;
+      }
+    }
+  }
+}
+
