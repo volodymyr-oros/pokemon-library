@@ -1,0 +1,14 @@
+@use "sass:map";
+@use "../variables/breakpoints" as *;
+
+@mixin respond($point) {
+  $value: map.get($breakpoints, $point);
+
+  @if $value {
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @error "No breakpoint found for '#{$point}'";
+  }
+}
