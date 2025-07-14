@@ -33,6 +33,7 @@
       "@layout/*": ["src/layouts/*"],
       "@layout-type/*": ["src/types/layouts/*"],
       "@fonts/*": ["src/assets/fonts*"],
+      "@variables": ["src/styles/variables"],
     },
   },
   "include": ["src"]

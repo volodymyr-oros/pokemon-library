@@ -1,0 +1,33 @@
+@use "@variables" as *;
+
+html {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $text-color-primary;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: $color-accent;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Flex", sans-serif;
+  //   font-weight: bold;
+  color: $text-color-primary;
+  margin: 0 0 0.5em 0;
+}

@@ -15,6 +15,7 @@ export default defineConfig({
       "@layout": path.resolve(__dirname, "./src/layouts"),
       "@layout-type": path.resolve(__dirname, "./src/types/layouts"),
       "@fonts": path.resolve(__dirname, "./src/assets/fonts"),
+      "@variables": path.resolve(__dirname, "./src/styles/variables"),
     },
   },
 });

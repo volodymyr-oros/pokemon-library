@@ -1,4 +1,2 @@
-@use "./fonts";
-@use "./reset";
-@use "./variables/variables";
-
+@forward "./base";
+@forward "./mixins";
