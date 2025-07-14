@@ -31,7 +31,8 @@
       "@/*": ["src/*"],
       "@component/*": ["src/components/*"],
       "@layout/*": ["src/layouts/*"],
-      "@layout-type/*": ["src/types/layouts/*"]
+      "@layout-type/*": ["src/types/layouts/*"],
+      "@fonts/*": ["src/assets/fonts*"],
     },
   },
   "include": ["src"]
