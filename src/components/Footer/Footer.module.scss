@@ -1,44 +1,59 @@
+@use "@mixins/media" as *;
+@use "@variables" as *;
+
 .footer {
+  padding: 1.5em 2em 0.5em 2em;
+  --border: .3em;
+  border: var(--border) solid $red-border-color;
+  border-bottom: 0;
+  border-radius: 3em 3em 0 0;
+  background-color: $color-primary;
+  font-size: 0.8rem;
   &__row {
-    // ...
+    padding-block: 0.5em;
+    @include respond(md) {
+      display: flex;
+      justify-content: space-around;
+    }
   }
 
   &__column {
-    // ...
+    padding-inline: 0.5em;
+    padding-block-end: 0.8em;
   }
 
   &__title {
-    // ...
+    text-align: center;
+    color: $text-color-hover;
   }
 
   &__link {
-    // ...
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 1.2em;
+    color: $color-dark;
     &:hover,
     &:focus {
-      // ...
+      color: $text-color-hover;
     }
   }
 
   &__list {
-    // ...
+    padding: 0;
   }
 
   &__item {
-    // ...
+    padding-block: 0.3em;
+    list-style: none;
   }
-
   &__copyright {
-    // ...
-  }
-
-  .link {
-    &__img {
-      // ...
-    }
-
-    &__text {
-      // ...
-    }
+    border: 2px solid black;
+    border-radius: 1em;
+    padding: 0.3em 0.6em;
+    background-color: $page-background;
   }
 }

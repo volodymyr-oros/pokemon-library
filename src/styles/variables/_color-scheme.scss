@@ -17,8 +17,13 @@ $color-rock: #795548;
 // --- Text Colors ---
 $text-color-primary: $color-dark;
 $text-color-secondary: #666666;
+$text-color-hover: $color-light;
 
-// --- Background gradients ---
+// --- Decorations ---
+$red-border-color: #a73535;
+
+// --- Background and background gradients ---
+$page-background: #FAF3E0;
 $gradient-fire: linear-gradient(45deg, #ff5722, #ff8a50);
 $gradient-water: linear-gradient(45deg, #2196f3, #6ec6ff);
 $gradient-grass: linear-gradient(45deg, #4caf50, #81c784);

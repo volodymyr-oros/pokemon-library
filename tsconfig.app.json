@@ -32,8 +32,9 @@
       "@component/*": ["src/components/*"],
       "@layout/*": ["src/layouts/*"],
       "@layout-type/*": ["src/types/layouts/*"],
-      "@fonts/*": ["src/assets/fonts*"],
+      "@fonts/*": ["src/assets/fonts/*"],
       "@variables": ["src/styles/variables"],
+      "@mixins": ["src/styles/mixins/*"],
     },
   },
   "include": ["src"]

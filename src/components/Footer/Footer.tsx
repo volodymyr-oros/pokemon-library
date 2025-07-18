@@ -1,3 +1,6 @@
+import gitHubIcon from "./assets/github.png";
+import pokeAPIIcon from "./assets/api.png";
+import bugIcon from "./assets/bug.png";
 import styles from "./Footer.module.scss";
 
 export default function Footer() {
@@ -11,22 +14,32 @@ export default function Footer() {
             className={styles.footer__link}
             aria-label="Go to PokeAPI"
           >
-            pokeapi.co
+            <img
+              src={pokeAPIIcon}
+              className={styles.footer__icon}
+              alt="Pokemon API logo"
+              width="30"
+              height="auto"
+            />
+            <span className={styles.footer__linkText}>PokeAPI</span>
           </a>
         </section>
 
         <section className={styles.footer__column}>
+          <h2 className={styles.footer__title}>Come say hi</h2>
           <ul className={styles.footer__list}>
             <li className={styles.footer__item}>
               <a
-                href="https://github.com/"
+                href="https://github.com/volodymyr-oros"
                 className={styles.footer__link}
                 aria-label="Go to GitHub"
               >
                 <img
+                  src={gitHubIcon}
                   className={styles.footer__icon}
-                  src="/icons/github.svg"
                   alt="GitHub logo"
+                  width="30"
+                  height="auto"
                 />
                 <span className={styles.footer__linkText}>GitHub</span>
               </a>
@@ -36,8 +49,15 @@ export default function Footer() {
 
         <section className={styles.footer__column}>
           <h2 className={styles.footer__title}>Found any bugs?</h2>
-          <a href="/" className={styles.footer__link}>
-            Report Bugs
+          <a href="/" className={styles.footer__link} aria-label="Report a bug">
+            <img
+              src={bugIcon}
+              className={styles.footer__icon}
+              alt="Bug logo"
+              width="30"
+              height="auto"
+            />
+            <span className={styles.footer__linkText}>Report Bugs</span>
           </a>
         </section>
       </div>
