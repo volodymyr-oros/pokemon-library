@@ -1,5 +1,5 @@
-@use "../../styles/mixins/media" as *;
-@use "../../styles/variables/color-scheme" as *;
+@use "@mixins/media" as *;
+@use "@variables" as *;
 
 $viewport-margin: calc((100vw - 100%) / 2);
 $edge-position: calc($viewport-margin * -1);
