@@ -1,10 +1,14 @@
-function App() {
+import MainLayout from "@layout/MainLayout/MainLayout";
+import TestComponent from "@component/Test/TestComponent";
 
+import "./App.scss";
+
+function App() {
   return (
-    <>
-  <h1>HelloWorld</h1>
-    </>
-  )
+    <MainLayout className={"wrapper"}>
+      <TestComponent />
+    </MainLayout>
+  );
 }
 
-export default App
+export default App;
