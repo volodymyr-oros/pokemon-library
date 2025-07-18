@@ -1,0 +1,15 @@
+{
+  "languageSwitcher": {
+    "label": "Language",
+    "enOption": "English",
+    "ukOption": "Ukrainian"
+  },
+  "footer": {
+    "pokeapiTitle": "Website uses PokeAPI",
+    "comeSayHi": "Come say hi",
+    "github": "GitHub",
+    "reportBugs": "Found any bugs?",
+    "report": "Report Bugs",
+    "copyright": "All rights reserved"
+  }
+}

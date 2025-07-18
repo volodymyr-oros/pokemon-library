@@ -1,0 +1,15 @@
+{
+  "languageSwitcher": {
+    "label": "Мова",
+    "enOption": "Англійська",
+    "ukOption": "Українська"
+  },
+  "footer": {
+    "pokeapiTitle": "Сайт використовує PokeAPI",
+    "comeSayHi": "Напишіть привіт",
+    "github": "Гітхаб",
+    "reportBugs": "Знайшли баг?",
+    "report": "Повідомити про баг",
+    "copyright": "Всі права захищено"
+  }
+}
