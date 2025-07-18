@@ -1,14 +1,18 @@
 import gitHubIcon from "./assets/github.png";
 import pokeAPIIcon from "./assets/api.png";
 import bugIcon from "./assets/bug.png";
+
+import { useTranslation } from "react-i18next";
+
 import styles from "./Footer.module.scss";
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <div className={styles.footer}>
       <div className={styles.footer__row}>
         <section className={styles.footer__column}>
-          <h2 className={styles.footer__title}>Website uses PokeAPI</h2>
+          <h2 className={styles.footer__title}>{t("footer.pokeapiTitle")}</h2>
           <a
             href="https://pokeapi.co/"
             className={styles.footer__link}
@@ -26,7 +30,7 @@ export default function Footer() {
         </section>
 
         <section className={styles.footer__column}>
-          <h2 className={styles.footer__title}>Come say hi</h2>
+          <h2 className={styles.footer__title}>{t("footer.comeSayHi")}</h2>
           <ul className={styles.footer__list}>
             <li className={styles.footer__item}>
               <a
@@ -41,14 +45,16 @@ export default function Footer() {
                   width="30"
                   height="auto"
                 />
-                <span className={styles.footer__linkText}>GitHub</span>
+                <span className={styles.footer__linkText}>
+                  {t("footer.github")}
+                </span>
               </a>
             </li>
           </ul>
         </section>
 
         <section className={styles.footer__column}>
-          <h2 className={styles.footer__title}>Found any bugs?</h2>
+          <h2 className={styles.footer__title}>{t("footer.reportBugs")}</h2>
           <a href="/" className={styles.footer__link} aria-label="Report a bug">
             <img
               src={bugIcon}
@@ -57,14 +63,16 @@ export default function Footer() {
               width="30"
               height="auto"
             />
-            <span className={styles.footer__linkText}>Report Bugs</span>
+            <span className={styles.footer__linkText}>
+              {t("footer.report")}
+            </span>
           </a>
         </section>
       </div>
 
       <div className={styles.footer__row}>
         <span className={styles.footer__copyright}>
-          &copy; {new Date().getFullYear()} All rights reserved
+          &copy; {new Date().getFullYear()} {t("footer.copyright")}
         </span>
       </div>
     </div>
