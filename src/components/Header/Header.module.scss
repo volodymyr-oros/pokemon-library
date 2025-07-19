@@ -1,5 +1,7 @@
 @use "@mixins/media" as *;
 @use "@variables" as *;
+@use "@animations" as *;
+
 
 $viewport-margin: calc((100vw - 100%) / 2);
 $edge-position: calc($viewport-margin * -1);
@@ -10,7 +12,7 @@ $edge-position: calc($viewport-margin * -1);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
   min-height: 70px;
   padding-block: 1em;
   background-color: $color-primary;
@@ -45,9 +47,13 @@ $edge-position: calc($viewport-margin * -1);
       @include respond(md) {
         width: 5em;
       }
-      
+
       @include respond(xl) {
         width: 7em;
+      }
+
+      &:hover {
+        animation: tilt-shaking .3s ease-in-out 1;
       }
     }
   }
