@@ -33,8 +33,9 @@
       "@layout/*": ["src/layouts/*"],
       "@layout-type/*": ["src/types/layouts/*"],
       "@fonts/*": ["src/assets/fonts/*"],
-      "@variables": ["src/styles/variables"],
-      "@mixins": ["src/styles/mixins/*"],
+      "@variables/*": ["src/styles/variables/*"],
+      "@mixins/*": ["src/styles/mixins/*"],
+      "@pages/*": ["src/pages/*"],
     },
   },
   "include": ["src"]

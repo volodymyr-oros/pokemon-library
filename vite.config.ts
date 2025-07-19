@@ -17,6 +17,7 @@ export default defineConfig({
       "@fonts": path.resolve(__dirname, "./src/assets/fonts"),
       "@variables": path.resolve(__dirname, "./src/styles/variables"),
       "@mixins": path.resolve(__dirname, "./src/styles/mixins"),
+      "@pages": path.resolve(__dirname, "./src/pages"),
     },
   },
 });
