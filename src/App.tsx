@@ -1,13 +1,18 @@
-import MainLayout from "@layout/MainLayout/MainLayout";
-import TestComponent from "@component/Test/TestComponent";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "@pages/Home/Home";
+import NotFound from "@pages/NotFound/NotFound";
 
 import "./App.scss";
 
 function App() {
   return (
-    <MainLayout className={"wrapper"}>
-      <TestComponent />
-    </MainLayout>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
