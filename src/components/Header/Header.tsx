@@ -1,3 +1,4 @@
+import LanguageSwitcher from "@component/LanguageSwitcher/LanguageSwitcher";
 import logo from "./assets/logo.png";
 import styles from "./Header.module.scss";
 
@@ -15,6 +16,7 @@ export default function Header() {
           />
         </a>
       </div>
+      <LanguageSwitcher />
     </div>
   );
 }

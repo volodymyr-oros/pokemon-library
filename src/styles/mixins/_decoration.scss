@@ -1,0 +1,10 @@
+@use "sass:map";
+@use "@variables" as *;
+
+@mixin border() {
+  background-color: $page-background;
+  padding: 0.3em 0.6em;
+  box-shadow: inset $color-dark 0px 0px 3px 0px;
+  border: 3px solid $red-border-color;
+  border-radius: 1em;
+}

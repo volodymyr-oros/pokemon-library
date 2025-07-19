@@ -1,0 +1,25 @@
+@use "@variables" as *;
+@use "@mixins" as *;
+
+.switcher {
+  @include border();
+
+  &__label {
+    padding-inline-end: 0.3em;
+  }
+
+  &__selector {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: $page-background;
+  }
+
+  &__selector,
+  &__selector:active,
+  &__selector:focus,
+  &__selector:hover {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+}

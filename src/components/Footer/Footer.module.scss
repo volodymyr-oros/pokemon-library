@@ -1,4 +1,4 @@
-@use "@mixins/media" as *;
+@use "@mixins" as *;
 @use "@variables" as *;
 
 .footer {
@@ -51,9 +51,6 @@
     list-style: none;
   }
   &__copyright {
-    border: 2px solid black;
-    border-radius: 1em;
-    padding: 0.3em 0.6em;
-    background-color: $page-background;
+    @include border();
   }
 }
