@@ -17,7 +17,11 @@ export default function LanguageSwitcher() {
 
   return (
     <div className={styles.switcher}>
-      <label className={styles.switcher__label} htmlFor="selector">
+      <label
+        className={styles.switcher__label}
+        htmlFor="selector"
+        data-testid="language-label"
+      >
         {t("languageSwitcher.label")}:
       </label>
 
@@ -27,6 +31,7 @@ export default function LanguageSwitcher() {
         name="Selectlanguage"
         id="selector"
         value={currentLanguage}
+        data-testid="language-selector"
       >
         <option value="en">{t("languageSwitcher.enOption")}</option>
         <option value="uk">{t("languageSwitcher.ukOption")}</option>

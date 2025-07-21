@@ -6,7 +6,12 @@ export default function Header() {
   return (
     <div className={styles.header}>
       <div className={`${styles.header__logo} ${styles.logo}`}>
-        <a href="/" className={styles.logo__link} aria-label="Go to homepage">
+        <a
+          href="/"
+          className={styles.logo__link}
+          aria-label="Go to homepage"
+          data-testid="logo"
+        >
           <img
             src={logo}
             className={styles.logo__img}
