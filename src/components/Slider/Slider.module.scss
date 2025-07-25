@@ -1,10 +1,11 @@
-@use "@mixins/media" as *;
+@use "@mixins" as *;
 @use "@variables" as *;
 
 .slider {
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-rows: 1fr;
+  overflow-x: hidden;
 
   &__wrap {
     grid-column: 1 / -1;
@@ -12,42 +13,48 @@
 
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
     list-style: none;
 
     padding: 0;
     height: 300px;
+
+    transition: transform 0.5s ease;
+    will-change: transform;
   }
 
   &__button {
-    grid-row: 1;
-    cursor: pointer;
-    min-width: 5em;
-    border: none;
-    outline: none;
-    background: transparent;
-    transition: background ease-in 0.3s;
+    display: none;
+    @include respond(lg) {
+      display: block;
 
-    span {
-      color: red; // Have to hide for view and live fore screen reader only
-    }
+      grid-row: 1;
+      cursor: pointer;
+      min-width: 5em;
+      border: none;
+      outline: none;
+      background: transparent;
+      transition: background ease-in 0.3s;
 
-    &:hover {
-      background: rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(0.1em);
-    }
+      span {
+        @include sr-only();
+      }
 
-    &--prev {
-      grid-column: 1 / 2;
-      border-top-right-radius: 50%;
-      border-bottom-right-radius: 50%;
-    }
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(0.1em);
+      }
 
-    &--next {
-      grid-column: 3 / 4;
-      border-top-left-radius: 50%;
-      border-bottom-left-radius: 50%;
+      &--prev {
+        grid-column: 1 / 2;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+      }
+
+      &--next {
+        grid-column: 3 / 4;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+      }
     }
   }
 }
@@ -55,7 +62,8 @@
 .slide {
   width: 100%;
   flex: 0 0 auto;
-  scroll-snap-align: start;
+  user-select: none;
+  pointer-events: none;
 
   display: grid;
   grid-template-rows: 1fr auto 1fr;
